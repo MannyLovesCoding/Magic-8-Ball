@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'roboto';
+    src: url('./Roboto-Regular.ttf');
+}
+
+* {
+    font-family: 'roboto';
+}
+
+body {
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+#shake-btn {
+    margin: 0 auto;
+    background-color:transparent;
+    border-color: transparent;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+    border-color: #2d53fe;
+    color: #2d53fe;
+}
+
+#response {
+    visibility: hidden;
+    font-size: 50px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+img {
+    height: 350px;
+}
+
+#questionInput {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: black;
+}
