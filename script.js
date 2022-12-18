@@ -10,6 +10,7 @@ function magicBall() {
     if (questionInput == '') {
         document.getElementById('response').style.visibility = 'visible';
         reponse.innerHTML = 'Type A Question First';
+        reponse.style.backgroundColor = 'transparent';
     } else {
         document.getElementById('response').style.visibility = 'visible';
         document.getElementById('shake-btn').value = 'SHAKE AGAIN!';
