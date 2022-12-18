@@ -4,13 +4,19 @@
 const respones = ['Yes', 'Absolutely', 'Maybe', 'Absolutely Not', `Don't count on it`, 'No'];
 const backgroundColors = ['red', 'green', 'blue', 'orange'];
 function magicBall() {
-    document.getElementById('response').style.visibility = 'visible';
-    document.getElementById('shake-btn').value = 'SHAKE AGAIN!';
     console.log('Generating Answer');
-    const randomNumber = Math.ceil(Math.random() * respones.length - 1); // Gets responses length so the random number doesn't exceed the length
-    const randomNumber2 = Math.ceil(Math.random() * backgroundColors.length - 1);
-    console.log(randomNumber);
     const reponse = document.getElementById('response');
-    reponse.innerHTML = respones[randomNumber];
-    reponse.style.backgroundColor = backgroundColors[randomNumber2];
+    const questionInput = document.getElementById('questionInput').value;
+    if (questionInput == '') {
+        document.getElementById('response').style.visibility = 'visible';
+        reponse.innerHTML = 'Type A Question First';
+    } else {
+        document.getElementById('response').style.visibility = 'visible';
+        document.getElementById('shake-btn').value = 'SHAKE AGAIN!';
+        const randomNumber = Math.ceil(Math.random() * respones.length - 1); // Gets responses length so the random number doesn't exceed the length
+        const randomNumber2 = Math.ceil(Math.random() * backgroundColors.length - 1);
+        console.log(randomNumber);
+        reponse.innerHTML = respones[randomNumber];
+        reponse.style.backgroundColor = backgroundColors[randomNumber2];
+    }
 }
